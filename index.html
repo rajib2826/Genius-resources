@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Geometry Genius</title>
+    <style>
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="md:mx-12">
+      <div class="navbar bg-blue-100 shadow-2xl lg:px-12 py-6 rounded-lg mt-2">
+        <div class="navbar-start">
+          <h2 class="text-xl">
+            <span class="font-bold text-3xl">Interactive</span> <br />
+            Geometry Genius
+          </h2>
+        </div>
+        <div class="navbar-center hidden lg:flex sm:flex"></div>
+        <div class="navbar-end">
+          <button
+            class="text-2xl bg-blue-500 hover:bg-blue-700 px-8 py-2 text-white rounded"
+          >
+            <a href="blog.html"> Blog</a>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row gap-6">
+        <div
+          class="products-cetails w-[90%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <!-- card-1 -->
+          <div class="card w-auto bg-base-100 shadow-xl hover:bg-red-400">
+            <figure class="px-10 pt-10">
+              <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 id="first-name" class="card-title text-2xl font-bold">
+                Triangle
+              </h2>
+              <p class="text-lg mb-4">Area (A) = 0.5 * b * h</p>
+
+              <fieldset>
+                <div class="mb-5">
+                  <input
+                    id="card-1-first-field"
+                    class="w-4/12 bg-teal-100 rounded px-2 py-1"
+                    type="number"
+                    placeholder="b"
+                  />
+                  <label for="">cm</label>
+
+                  <input
+                    id="card-1-second-field"
+                    class="w-4/12 bg-teal-100 ml-2 rounded px-2 py-1"
+                    type="number"
+                    placeholder="h"
+                  />
+                  <label for="">cm</label>
+                </div>
+              </fieldset>
+
+              <button
+                id="first-card"
+                class="bg-blue-400 px-16 py-3 rounded-lg hover:bg-blue-600 text-white font-bold text-2xl"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+          <!-- card-2 -->
+
+          <div class="card w-auto bg-base-100 shadow-xl hover:bg-violet-400">
+            <figure class="px-10 pt-10">
+              <img src="images/rectangle.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 id="second-name" class="card-title text-2xl font-bold">
+                Rectangle
+              </h2>
+              <p class="text-lg mb-4">Area (A) = w * l</p>
+
+              <fieldset>
+                <div class="mb-5">
+                  <input
+                    id="card-2-first-field"
+                    class="w-4/12 bg-teal-100 rounded px-2 py-1"
+                    type="number"
+                    placeholder="w"
+                  />
+                  <label for="">cm</label>
+
+                  <input
+                    id="card-2-second-field"
+                    class="w-4/12 bg-teal-100 ml-2 rounded px-2 py-1"
+                    type="number"
+                    placeholder="l"
+                  />
+                  <label for="">cm</label>
+                </div>
+              </fieldset>
+
+              <button
+                id="second-card"
+                class="bg-blue-400 px-16 py-3 rounded-lg hover:bg-blue-600 text-white font-bold text-2xl"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+          <!-- card-3 -->
+          <div class="card w-auto bg-base-100 shadow-xl hover:bg-teal-300">
+            <figure class="px-10 pt-10">
+              <img
+                src="images/parallelogram.png"
+                alt="Shoes"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 id="third-name" class="card-title text-2xl font-bold">
+                Parallelogram
+              </h2>
+              <p class="text-lg">Area (A) = b * h</p>
+              <p class="text-lg mb-4">b=10cm, h=12cem</p>
+
+              <fieldset>
+                <div class="mb-5">
+                  <input
+                    id="card-3-first-field"
+                    class="w-4/12 bg-teal-100 rounded px-2 py-1"
+                    type="number"
+                    placeholder="b"
+                  />
+                  <label for="">cm</label>
+
+                  <input
+                    id="card-3-second-field"
+                    class="w-4/12 bg-teal-100 ml-2 rounded px-2 py-1"
+                    type="number"
+                    placeholder="h"
+                  />
+                  <label for="">cm</label>
+                </div>
+              </fieldset>
+
+              <button
+                id="third-card"
+                class="bg-blue-400 px-16 py-3 rounded-lg hover:bg-blue-600 text-white font-bold text-2xl"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+
+          <!-- card-4 -->
+          <div class="card w-auto bg-base-100 shadow-xl hover:bg-lime-400">
+            <figure class="px-10 pt-10">
+              <img src="images/rhombus.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 id="four-name" class="card-title text-2xl font-bold">
+                Rhombus
+              </h2>
+              <p class="text-lg">Area (A) = 0.5 * d1 * d2</p>
+              <p class="text-lg mb-4">d1= 16cm, d2= 8cm</p>
+
+              <fieldset>
+                <div class="mb-5">
+                  <input
+                    id="card-4-first-field"
+                    class="w-4/12 bg-teal-100 rounded px-2 py-1"
+                    type="number"
+                    placeholder="d1"
+                  />
+                  <label for="">cm</label>
+
+                  <input
+                    id="card-4-second-field"
+                    class="w-4/12 bg-teal-100 ml-2 rounded px-2 py-1"
+                    type="number"
+                    placeholder="d2"
+                  />
+                  <label for="">cm</label>
+                </div>
+              </fieldset>
+
+              <button
+                id="four-card"
+                class="bg-blue-400 px-16 py-3 rounded-lg hover:bg-blue-600 text-white font-bold text-2xl"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+          <!-- card-5 -->
+          <div class="card w-auto bg-base-100 shadow-xl hover:bg-purple-300">
+            <figure class="px-10 pt-10">
+              <img src="images/pentagon.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 id="five-name" class="card-title text-2xl font-bold">
+                Pentagon
+              </h2>
+              <p class="text-lg">Area (A) = 0.5 * p * b</p>
+              <p class="text-lg mb-4">p= 6cm, b= 10cm</p>
+
+              <fieldset>
+                <div class="mb-5">
+                  <input
+                    id="card-5-first-field"
+                    class="w-4/12 bg-teal-100 rounded px-2 py-1"
+                    type="number"
+                    placeholder="p"
+                  />
+                  <label for="">cm</label>
+
+                  <input
+                    id="card-5-second-field"
+                    class="w-4/12 bg-teal-100 ml-2 rounded px-2 py-1"
+                    type="number"
+                    placeholder="b"
+                  />
+                  <label for="">cm</label>
+                </div>
+              </fieldset>
+
+              <button
+                id="five-card"
+                class="bg-blue-400 px-16 py-3 rounded-lg hover:bg-blue-600 text-white font-bold text-2xl"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+          <!-- card-6 -->
+          <div class="card w-auto bg-base-100 shadow-xl hover:bg-orange-400">
+            <figure class="px-10 pt-10">
+              <img src="images/ellipse.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 id="six-name" class="card-title text-2xl font-bold">
+                Ellipse
+              </h2>
+              <p class="text-lg">Area (A) = 3.1416 * a * b</p>
+              <p class="text-lg mb-4">a= 10cm, b= 4cm</p>
+
+              <fieldset>
+                <div class="mb-5">
+                  <input
+                    id="card-6-first-field"
+                    class="w-4/12 bg-teal-100 rounded px-2 py-1"
+                    type="number"
+                    placeholder="a"
+                  />
+                  <label for="">cm</label>
+
+                  <input
+                    id="card-6-second-field"
+                    class="w-4/12 bg-teal-100 ml-2 rounded px-2 py-1"
+                    type="number"
+                    placeholder="b"
+                  />
+                  <label for="">cm</label>
+                </div>
+              </fieldset>
+
+              <button
+                id="six-card"
+                class="bg-blue-400 px-16 py-3 rounded-lg hover:bg-blue-600 text-white font-bold text-2xl"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="cart-details w-full sm:w-[30%] md:w-[30%] lg:w[30%] mx-auto"
+        >
+          <h1 class="text-3xl text-center font-bold underline mt-5">
+            Area Calculation
+          </h1>
+          <div class="overflow-x-auto mt-4">
+            <table class="table w-full">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Name</th>
+                  <th>Total</th>
+                  <th>Button</th>
+                </tr>
+              </thead>
+              <tbody id="table-container">
+                <!-- <tr>
+                  <td>1</td>
+                  <td></td>
+                  <td>Name</td>
+                  <td>Total</td>
+                  <td>Button</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/Apps.js"></script>
+  </body>
+</html>
